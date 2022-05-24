@@ -1,0 +1,21 @@
+# time complexity: o(log10(n)) space complexity: o(1)
+
+class Solution:
+    
+    def isPalindrome(self, x):
+# define variables
+        if x > 0:
+            temp = x
+            reverse = []
+# half value, check if values are same
+            while temp > 0:
+                digit = temp % 10
+                reverse.append(digit)
+                temp = temp // 10
+            original = reverse[::-1]
+            return reverse == original
+    
+        elif x == 0:
+            return True
+        else:
+            return False
